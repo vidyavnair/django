@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <form method="POST" action="counter">
+            {% csrf_token %}
+            <textarea name="text" cols="20" rows="20"></textarea><br>
+            <input type="submit" value="save">
+
+        </form>
+    </body>
+</html>
