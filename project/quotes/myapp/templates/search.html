@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+    <h1>Search Results for "{{ query }}"</h1>
+    <ul>
+        {% for quote in results %}
+            <li>{{ quote.text }} — <em>{{ quote.author }}</em></li>
+        {% empty %}
+            <li>No quotes found.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Back to Quote of the Day</a>
+</body>
+</html>
